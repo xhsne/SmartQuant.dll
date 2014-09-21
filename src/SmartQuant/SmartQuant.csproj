@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A09B376-7AFA-40CE-AFBD-448984BC4514}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SmartQuant</RootNamespace>
+    <AssemblyName>SmartQuant.dll</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="BarType.cs" />
+    <Compile Include="ChartStyle.cs" />
+    <Compile Include="XmlProvider.cs" />
+    <Compile Include="XmlProviderManagerSettings.cs" />
+    <Compile Include="XmlProviderProperty.cs" />
+    <Compile Include="TickType.cs" />
+    <Compile Include="StrategyStatusType.cs" />
+    <Compile Include="StrategyMode.cs" />
+    <Compile Include="StrategyStatus.cs" />
+    <Compile Include="StopFillMode.cs" />
+    <Compile Include="StopMode.cs" />
+    <Compile Include="StopStatus.cs" />
+    <Compile Include="StopType.cs" />
+    <Compile Include="ProviderId.cs" />
+    <Compile Include="EventType.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="DataObject.cs" />
+    <Compile Include="DataObjectType.cs" />
+    <Compile Include="Tick.cs" />
+    <Compile Include="Ask.cs" />
+    <Compile Include="Bid.cs" />
+    <Compile Include="Quote.cs" />
+    <Compile Include="Trade.cs" />
+    <Compile Include="BarData.cs" />
+    <Compile Include="BarInput.cs" />
+    <Compile Include="BarStatus.cs" />
+    <Compile Include="ClockMode.cs" />
+    <Compile Include="ClockResolution.cs" />
+    <Compile Include="CommissionType.cs" />
+    <Compile Include="Cross.cs" />
+    <Compile Include="EWidthStyle.cs" />
+    <Compile Include="ExecType.cs" />
+    <Compile Include="Field.cs" />
+    <Compile Include="FrameworkMode.cs" />
+    <Compile Include="IProvider.cs" />
+    <Compile Include="ProviderStatus.cs" />
+    <Compile Include="IDataSeries.cs" />
+    <Compile Include="SearchOption.cs" />
+    <Compile Include="ISeries.cs" />
+    <Compile Include="OrderSide.cs" />
+    <Compile Include="OrderStatus.cs" />
+    <Compile Include="OrderType.cs" />
+    <Compile Include="PositionSide.cs" />
+    <Compile Include="SaveMode.cs" />
+    <Compile Include="IndexOption.cs" />
+    <Compile Include="Indicator.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Instrument.cs" />
+    <Compile Include="InstrumentList.cs" />
+    <Compile Include="ICurrencyConverter.cs" />
+    <Compile Include="InstrumentType.cs" />
+    <Compile Include="IOrderServer.cs" />
+    <Compile Include="HistoricalDataRequest.cs" />
+    <Compile Include="IDataProvider.cs" />
+    <Compile Include="IHistoricalDataProvider.cs" />
+    <Compile Include="ParameterAttribute.cs" />
+    <Compile Include="EventQueueId.cs" />
+    <Compile Include="EventQueuePriority.cs" />
+    <Compile Include="EventQueueType.cs" />
+    <Compile Include="FundamentalData.cs" />
+    <Compile Include="Installation.cs" />
+    <Compile Include="InstrumentDefinitionRequest.cs" />
+    <Compile Include="EventBusMode.cs" />
+    <Compile Include="EventManagerStatus.cs" />
+    <Compile Include="TimeInForce.cs" />
+    <Compile Include="TradeDetectionType.cs" />
+  </ItemGroup>
+</Project>
