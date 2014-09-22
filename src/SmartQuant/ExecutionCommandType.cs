@@ -3,9 +3,10 @@
 
 namespace SmartQuant
 {
-    public enum StrategyStatusType : byte
+    public enum ExecutionCommandType
     {
-        Started,
-        Stopped
+        Send,
+        Cancel,
+        Replace
     }
 }

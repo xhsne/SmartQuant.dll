@@ -3,9 +3,9 @@
 
 namespace SmartQuant
 {
-    public enum StrategyStatusType : byte
+    public enum Level2Side : byte
     {
-        Started,
-        Stopped
+        Bid,
+        Ask
     }
 }

@@ -29,6 +29,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -98,5 +99,42 @@
     <Compile Include="EventManagerStatus.cs" />
     <Compile Include="TimeInForce.cs" />
     <Compile Include="TradeDetectionType.cs" />
+    <Compile Include="JsonProvider.cs" />
+    <Compile Include="JsonProviderManagerSettings.cs" />
+    <Compile Include="JsonProviderProperty.cs" />
+    <Compile Include="Level2Side.cs" />
+    <Compile Include="Framework.cs" />
+    <Compile Include="ExecutionCommandType.cs" />
+    <Compile Include="IEventQueue.cs" />
+    <Compile Include="CurrencyConverter.cs" />
+    <Compile Include="BarSlice.cs" />
+    <Compile Include="IdArray.cs" />
+    <Compile Include="EventFilter.cs" />
+    <Compile Include="ReminderCallback.cs" />
+    <Compile Include="RequestResult.cs" />
+    <Compile Include="ServerConfiguration.cs" />
+    <Compile Include="Signal.cs" />
+    <Compile Include="ObjectStreamer.cs" />
+    <Compile Include="StreamerManager.cs" />
+    <Compile Include="LicenseInfo.cs" />
+    <Compile Include="LicenseManager.cs" />
+    <Compile Include="ProviderErrorType.cs" />
+    <Compile Include="QuickLZ.cs" />
+    <Compile Include="Licensing\License.cs" />
+    <Compile Include="AltId.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DataMessageType.cs" />
+    <Compile Include="PortfolioStatisticsType.cs" />
+    <Compile Include="ProviderPlugin.cs" />
+    <Compile Include="StreamerPlugin.cs" />
+    <Compile Include="EventLogger.cs" />
+    <Compile Include="EventLoggerManager.cs" />
+    <Compile Include="ProviderError.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Licensing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SmartQuant.csproj" />
   </ItemGroup>
 </Project>

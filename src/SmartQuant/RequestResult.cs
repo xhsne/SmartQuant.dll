@@ -3,9 +3,10 @@
 
 namespace SmartQuant
 {
-    public enum StrategyStatusType : byte
+    public enum RequestResult
     {
-        Started,
-        Stopped
+        Completed,
+        Cancelled,
+        Error,
     }
 }
