@@ -5,8 +5,6 @@ namespace SmartQuant
 {
     public class BarSlice : Event
     {
-        private long size;
-
         public override byte TypeId
         {
             get
@@ -15,17 +13,11 @@ namespace SmartQuant
             }
         }
 
-        public long Size
-        {
-            get
-            {
-                return this.size;
-            }
-        }
-            
+        public long Size { get; private set; }
+
         public BarSlice(long size)
         {
-            this.size = size;
+            this.Size = size;
         }
     }
 }

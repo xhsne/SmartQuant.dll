@@ -7,6 +7,7 @@ namespace SmartQuant
 {
 	public class Instrument
 	{
-	}
+        public string Symbol { get; set; }
+    }
 }
 

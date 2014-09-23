@@ -5,19 +5,23 @@ using System.Xml.Serialization;
 
 namespace SmartQuant
 {
-    public class StreamerPlugin
-    {
-        [XmlElement("TypeName")]
-        public string TypeName { get; set; }
+	public class StreamerPlugin
+	{
+		[XmlElement("TypeName")]
+		public string TypeName { get; set; }
 
-        public StreamerPlugin(string typeName)
-        {
-            this.TypeName = typeName;
-        }
+		public StreamerPlugin()
+		{
+		}
 
-        public override string ToString()
-        {
-            return this.TypeName;
-        }
-    }
+		public StreamerPlugin(string typeName)
+		{
+			this.TypeName = typeName;
+		}
+
+		public override string ToString()
+		{
+			return this.TypeName;
+		}
+	}
 }

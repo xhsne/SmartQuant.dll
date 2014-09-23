@@ -44,7 +44,7 @@ namespace SmartQuant
 
         public override string ToString()
         {
-            return string.Format("Id={0} Type={1} Code={2} Text={3}", this.Id, this.Type, this.Code, this.Text);
+            return string.Format("id={0} type={1} code={2} text={3}", this.Id, this.Type, this.Code, this.Text);
         }
     }
 }

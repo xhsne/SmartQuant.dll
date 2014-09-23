@@ -7,9 +7,6 @@ namespace SmartQuant
 {
     public class Quote : DataObject
     {
-        private Bid bid;
-        private Ask ask;
-
         public override byte TypeId
         {
             get
@@ -18,26 +15,14 @@ namespace SmartQuant
             }
         }
 
-        public Bid Bid
-        {
-            get
-            {
-                return this.bid;
-            }
-        }
+        public Bid Bid { get; private set; }
 
-        public Ask Ask
-        {
-            get
-            {
-                return this.ask;
-            }
-        }
+        public Ask Ask { get; private set; }
 
         public Quote(Bid bid, Ask ask)
         {
-            this.bid = bid;
-            this.ask = ask;
+            this.Bid = bid;
+            this.Ask = ask;
             this.DateTime = bid.DateTime > ask.DateTime ? bid.DateTime : ask.DateTime;
         }
 
