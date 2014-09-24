@@ -3,7 +3,8 @@
 
 namespace SmartQuant
 {
-	public class ObjectStreamer
-    {
-    }
+	public class GroupDispatcher
+	{
+	}
+
 }

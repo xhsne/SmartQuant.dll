@@ -56,12 +56,32 @@ namespace SmartQuant
 
         public void AddDefaultStreamers()
         {
-			throw new NotImplementedException ();
+            string[] types =
+            {
+               "SmartQuant.DataObjectStreamer"
+            };
+
+            foreach (string name in types)
+            {
+                Type t = Type.GetType(name);
+                this.Streamers.Add(new StreamerPlugin(t.FullName));
+            }
         }
 
         public void AddDefaultProviders()
         {
-			throw new NotImplementedException ();
+            var types = new Dictionary<string, bool>();
+            types.Add("SmartQuant.QR.QuantRouter", true);
+            types.Add("SmartQuant.QB.QuantBase", true);
+            types.Add("SmartQuant.IB.IBTWS", true);
+            types.Add("SmartQuant.TT.TTFIX", true);
+            types.Add("SmartQuant.OEC.OpenECry", true);
+
+            foreach (var pair in types)
+            {
+                Type t = Type.GetType(pair.Key);
+                this.Providers.Add(new ProviderPlugin(t.FullName, pair.Value));
+            }
 		}
 
         public static Configuration DefaultConfiguaration()

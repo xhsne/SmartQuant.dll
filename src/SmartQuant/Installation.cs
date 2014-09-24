@@ -3,6 +3,7 @@
 
 using System;
 using System.IO;
+using System.ComponentModel;
 
 namespace SmartQuant
 {
@@ -16,6 +17,7 @@ namespace SmartQuant
             }
         }
 
+		[Description()]
         public static DirectoryInfo ConfigDir
         {
             get

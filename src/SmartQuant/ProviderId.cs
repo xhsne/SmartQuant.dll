@@ -1,6 +1,5 @@
-﻿//
-// Author: Alex Lee <lu.lee05@gmail.com>
-//
+﻿// Licensed under the Apache License, Version 2.0. 
+// Copyright (c) Alex Lee. All rights reserved.
 
 using System.Collections.Generic;
 
@@ -46,64 +45,64 @@ namespace SmartQuant
         public const byte QuantRouter = 38;
         public const byte MatchingEngine = 100;
 
-        private static Dictionary<string, byte> providerMap;
+        private static Dictionary<string, byte> map;
 
         static ProviderId()
         {
-            providerMap = new Dictionary<string, byte>();
-            providerMap.Add("DataSimulator", ProviderId.DataSimulator);
-            providerMap.Add("ExecutionSimulator", ProviderId.ExecutionSimulator);
-            providerMap.Add("QuickFIX42", ProviderId.QuickFIX42);
-            providerMap.Add("IB", ProviderId.IB);
-            providerMap.Add("ESignal", ProviderId.ESignal);
-            providerMap.Add("MBTrading", ProviderId.MBTrading);
-            providerMap.Add("Opentick", ProviderId.Opentick);
-            providerMap.Add("QuoteTracker", ProviderId.QuoteTracker);
-            providerMap.Add("TAL", ProviderId.TAL);
-            providerMap.Add("TTFIX", ProviderId.TTFIX);
-            providerMap.Add("TTAPI", ProviderId.TTAPI);
-            providerMap.Add("Genesis", ProviderId.Genesis);
-            providerMap.Add("MyTrack", ProviderId.MyTrack);
-            providerMap.Add("Photon", ProviderId.Photon);
-            providerMap.Add("Bloomberg", ProviderId.Bloomberg);
-            providerMap.Add("Reuters", ProviderId.Reuters);
-            providerMap.Add("Yahoo", ProviderId.Yahoo);
-            providerMap.Add("DC", ProviderId.DC);
-            providerMap.Add("CSI", ProviderId.CSI);
-            providerMap.Add("QuantHouse", ProviderId.QuantHouse);
-            providerMap.Add("PATSAPI", ProviderId.PATSAPI);
-            providerMap.Add("OpenECry", ProviderId.OpenECry);
-            providerMap.Add("OpenTick", ProviderId.OpenTick);
-            providerMap.Add("FIX", ProviderId.FIX);
-            providerMap.Add("Google", ProviderId.Google);
-            providerMap.Add("Hotspot", ProviderId.Hotspot);
-            providerMap.Add("AlfaDirect", ProviderId.AlfaDirect);
-            providerMap.Add("Currenex", ProviderId.Currenex);
-            providerMap.Add("SmartCOM", ProviderId.SmartCOM);
-            providerMap.Add("GenericEOD", ProviderId.GenericEOD);
-            providerMap.Add("QUIKFIX", ProviderId.QUIKFIX);
-            providerMap.Add("OSLFIX", ProviderId.OSLFIX);
-            providerMap.Add("Nordnet", ProviderId.Nordnet);
-            providerMap.Add("Integral", ProviderId.Integral);
-            providerMap.Add("QuantBase", ProviderId.QuantBase);
-            providerMap.Add("QuantRouter", ProviderId.QuantRouter);
-            providerMap.Add("MatchingEngine", ProviderId.MatchingEngine);
+            map = new Dictionary<string, byte>();
+            map.Add("DataSimulator", DataSimulator);
+            map.Add("ExecutionSimulator", ExecutionSimulator);
+            map.Add("QuickFIX42", QuickFIX42);
+            map.Add("IB", IB);
+            map.Add("ESignal", ESignal);
+            map.Add("MBTrading", MBTrading);
+            map.Add("Opentick", Opentick);
+            map.Add("QuoteTracker", QuoteTracker);
+            map.Add("TAL", TAL);
+            map.Add("TTFIX", TTFIX);
+            map.Add("TTAPI", TTAPI);
+            map.Add("Genesis", Genesis);
+            map.Add("MyTrack", MyTrack);
+            map.Add("Photon", Photon);
+            map.Add("Bloomberg", Bloomberg);
+            map.Add("Reuters", Reuters);
+            map.Add("Yahoo", Yahoo);
+            map.Add("DC", DC);
+            map.Add("CSI", CSI);
+            map.Add("QuantHouse", QuantHouse);
+            map.Add("PATSAPI", PATSAPI);
+            map.Add("OpenECry", OpenECry);
+            map.Add("OpenTick", OpenTick);
+            map.Add("FIX", FIX);
+            map.Add("Google", Google);
+            map.Add("Hotspot", Hotspot);
+            map.Add("AlfaDirect", AlfaDirect);
+            map.Add("Currenex", Currenex);
+            map.Add("SmartCOM", SmartCOM);
+            map.Add("GenericEOD", GenericEOD);
+            map.Add("QUIKFIX", QUIKFIX);
+            map.Add("OSLFIX", OSLFIX);
+            map.Add("Nordnet", Nordnet);
+            map.Add("Integral", Integral);
+            map.Add("QuantBase", QuantBase);
+            map.Add("QuantRouter", QuantRouter);
+            map.Add("MatchingEngine", MatchingEngine);
         }
 
         public static void Add(string name, byte id)
         {
-            providerMap.Add(name, id);
+            map.Add(name, id);
         }
 
         public static void Remove(string name)
         {
-            providerMap.Remove(name);
+            map.Remove(name);
         }
 
         public static byte Get(string name)
         {
             byte id;
-            providerMap.TryGetValue(name, out id);
+            map.TryGetValue(name, out id);
             return id;
         }
     }
