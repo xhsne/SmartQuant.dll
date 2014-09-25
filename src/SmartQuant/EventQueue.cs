@@ -5,39 +5,19 @@ using System;
 
 namespace SmartQuant
 {
-	public class EventQueue : IEventQueue
-	{
-        public byte Id
-        {
-            get { throw new NotImplementedException(); }
-        }
+    public class EventQueue : IEventQueue
+    {
+        public byte Id { get; private set; }
 
-        public byte Type
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public byte Type { get; private set; }
 
-        public bool IsSynched
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Size { get; private set; }
 
-        public string Name
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public bool IsSynched { get; set; }
 
-        public byte Priority
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public string Name { get; private set; }
+
+        public byte Priority { get; private set; }
 
         public long Count
         {
@@ -52,6 +32,14 @@ namespace SmartQuant
         public long EmptyCount
         {
             get { throw new NotImplementedException(); }
+        }
+
+        public EventQueue(byte id, byte type = EventQueueType.Master, byte priority = EventQueuePriority.Normal, int size = 100000)
+        {
+            this.Id = id;
+            this.Type = type;
+            this.Priority = priority;
+            this.Size = size;
         }
 
         public Event Peek()

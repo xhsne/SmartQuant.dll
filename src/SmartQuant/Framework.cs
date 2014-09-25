@@ -9,6 +9,8 @@ namespace SmartQuant
     public class Framework : IDisposable
     {
         public void Dispose()
-        {}
+        {
+
+        }
     }
 }

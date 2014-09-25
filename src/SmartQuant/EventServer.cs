@@ -5,9 +5,13 @@ namespace SmartQuant
 {
 	public class EventServer
 	{
-        public EventServer(Framework framework, EventBus eventBus)
+        private Framework framework;
+        private EventBus bus;
+
+        public EventServer(Framework framework, EventBus bus)
         {
-            throw new System.NotImplementedException();
+            this.framework = framework;
+            this.bus = bus;
         }
 
         public void OnFrameworkCleared(Framework framework)

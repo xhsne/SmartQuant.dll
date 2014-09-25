@@ -7,6 +7,12 @@ namespace SmartQuant
 {
     public class Clock
     {
+        public DateTime DateTime
+        {
+            get;
+            set;
+        }
+
         public Clock(Framework framework, ClockMode mode = ClockMode.Simulation, bool isStandalone = false) 
         {
             this.Mode = mode;

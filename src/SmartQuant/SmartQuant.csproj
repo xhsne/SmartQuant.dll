@@ -312,10 +312,19 @@
     <Compile Include="MatchingEngine.cs" />
     <Compile Include="EventPipe.cs" />
     <Compile Include="PortfolioStatisticsItem.cs" />
+    <Compile Include="PortfolioStatisticsCategory.cs" />
+    <Compile Include="PortfolioStatistics.cs" />
+    <Compile Include="Statistics\Maximum.cs">
+      <Link>Statistics\Maximum.cs</Link>
+    </Compile>
+    <Compile Include="PortfolioStatisticsItemList.cs" />
+    <Compile Include="BarSliceFactory.cs" />
+    <Compile Include="BarFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Licensing\" />
     <Folder Include="Optimization\" />
     <Folder Include="Indicators\" />
+    <Folder Include="Statistics\" />
   </ItemGroup>
 </Project>
